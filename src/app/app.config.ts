@@ -29,6 +29,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
+    // older way
     // {
     //   provide: APP_INITIALIZER,
     //   useFactory: initializeApp1,
@@ -41,6 +42,7 @@ export const appConfig: ApplicationConfig = {
     //   multi: true,
     // },
 
+    // new way
     provideAppInitializer(() => {
       const initialService = inject(InitialService);
       return initializeApp1(initialService)();
