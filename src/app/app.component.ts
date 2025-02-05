@@ -4,10 +4,11 @@ import { InitialContentComponent } from './initial-content/initial-content.compo
 import { FirstDeferredComponent } from './first-deferred/first-deferred.component';
 import { SecondDeferredComponent } from './second-deferred/second-deferred.component';
 import { PollingComponent } from './polling/polling.component';
+import { UnitTestComponent } from './unit-test/unit-test/unit-test.component';
 
 @Component({
   selector: 'app-root',
-  imports: [InitialContentComponent, FirstDeferredComponent, SecondDeferredComponent, PollingComponent ],
+  imports: [InitialContentComponent, FirstDeferredComponent, SecondDeferredComponent, PollingComponent, UnitTestComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
