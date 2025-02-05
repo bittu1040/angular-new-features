@@ -18,7 +18,7 @@ export class PollingComponent {
   constructor(private pollingService: PollingService) { }
 
   ngOnInit() {
-    this.pollingService.startPolling(5000).pipe(
+    this.pollingService.startPolling(60000).pipe(
       takeUntil(this.destroy$)
     ).subscribe((response)=>{
       this.data= response;
