@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PollingComponent } from './polling.component';
+import { PollingService } from '../services/polling.service';
+import { HttpClientTestingModule, provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('PollingComponent', () => {
   let component: PollingComponent;
@@ -8,7 +10,8 @@ describe('PollingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PollingComponent]
+      imports: [HttpClientTestingModule, PollingComponent],
+      providers: [PollingService]
     })
     .compileComponents();
 
