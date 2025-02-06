@@ -8,7 +8,7 @@ export class MathService {
   constructor() { }
 
   add(a: number,b: number){
-    return a+b;
+    return Number(a)+ Number(b);
   }
 
   substract(a:number, b: number){

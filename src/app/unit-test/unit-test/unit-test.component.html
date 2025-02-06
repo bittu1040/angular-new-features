@@ -2,3 +2,10 @@
 
 <button (click)="calculate()">Calculate</button>
 <p>Result: {{ result }}</p>
+
+<form>
+    <input type="text" [(ngModel)]="number1" name="number1" />
+    <input type="text" [(ngModel)]="number2" name="number2" />
+    <button (click)="add()">Add</button>
+    <p>Result: {{ result1 }}</p>
+</form>
