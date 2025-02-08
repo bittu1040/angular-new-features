@@ -42,11 +42,9 @@ export class PollingComponent {
     this.dataService.getPosts().subscribe({
       next: (posts:any)=>{
         this.posts= posts;
-        console.log('Posts', this.posts); 
       },
       error: (error)=>{
         this.errorMessage= error;
-        console.error('Error', this.errorMessage);
       }
     });
   }

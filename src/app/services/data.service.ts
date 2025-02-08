@@ -8,10 +8,11 @@ import { catchError, retry, throwError } from 'rxjs';
 export class DataService {
 
   http= inject(HttpClient);
+  url= 'https://jsonplaceholder.typicode.com/posts';
   constructor() { }
 
   getPosts() {
-    return this.http.get('https://jsonplaceholder.typicode11.com/posts').pipe(
+    return this.http.get(this.url).pipe(
       retry(3),
       catchError(this.handleError)
     )
